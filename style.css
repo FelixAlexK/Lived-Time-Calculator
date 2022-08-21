@@ -19,3 +19,51 @@ body div{
   align-items: center;
   font-size: 2em;
 }
+
+form{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#text{
+  padding: 10px 20px;
+  border: none;
+  border-bottom: solid white;
+  border-left: solid white;
+  background-color: transparent;
+  color: white;
+  cursor: text;
+}
+
+#text:focus{
+  background-color: #242424;
+  border-style: none ;
+
+}
+
+#text:hover{
+  border-top: solid white;
+  border-right: solid white;
+  border-bottom: solid #505050;
+  border-left: solid #505050;
+}
+
+form button{
+  background-color: transparent;
+  border: none;
+  border-bottom: solid white;
+  border-left: solid white;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover{
+  border-top: solid white;
+  border-right: solid white;
+  border-bottom: solid #505050;
+  border-left: solid #505050;
+}
