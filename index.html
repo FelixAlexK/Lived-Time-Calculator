@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <title>Live-Time</title>
   </head>
-  <body onload="build()">
-    <div id="birthDate">05.10.2002</div>
+  <body onload="setLayout()">
+    <div>
+      <form onsubmit="getBirthDate(); return false">
+        <input id="text" type="text" placeholder="January 01, 1999" />
+        <button id="btn">submit</button>
+      </form>
+    </div>
+
     <div id="years">123</div>
     <div id="months">123</div>
     <div id="weeks">123</div>
