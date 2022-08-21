@@ -1,5 +1,5 @@
 const divs = document.getElementsByTagName('div');
-const birthDate = 'October 05, 2002 00:00:00';
+let textField = document.getElementById('text');
 
 let yearsDiv = document.getElementById('years');
 let monthsDiv = document.getElementById('months');
@@ -17,14 +17,19 @@ let hours;
 let minutes;
 let seconds;
 
-async function build(){
-  setLayout();
-  calcTimeLived();
-  render();
+
+
+function getBirthDate(){
+  let birthDate = textField.value;
+  textField.value = '';
+  calcTimeLived(birthDate);
 }
 
-function calcTimeLived(){
-  let birthday = new Date('2002-10-05 00:00');
+
+
+function calcTimeLived(birthdate){
+  
+  let birthday = new Date(birthdate);
   let ageDifMs = Date.now() - birthday.getTime(); 
   let date = new Date(ageDifMs);
   seconds = date / 1000;
@@ -34,6 +39,8 @@ function calcTimeLived(){
   weeks = days / 7;
   months = weeks / 4.345;
   years = months / 12;
+
+  render();
 }
 
 function render(){
@@ -54,6 +61,7 @@ function setLayout() {
     divs[i].style.height = (100 / divs.length) + 'vh';
     i++;
   }
+
 
 }
 
