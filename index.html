@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,21 +8,23 @@
     <link rel="stylesheet" href="style.css" />
     <title>Live-Time</title>
   </head>
-  <body onload="setLayout()">
-    <div>
-      <form onsubmit="getBirthDate(); return false">
-        <input id="text" type="text" placeholder="January 01, 1999" />
-        <button id="btn">submit</button>
-      </form>
-    </div>
 
-    <div id="years"></div>
-    <div id="months"></div>
-    <div id="weeks"></div>
-    <div id="days"></div>
-    <div id="hours"></div>
-    <div id="minutes"></div>
-    <div id="seconds"></div>
+  <body >
+
+    <main>
+      <div class="date-container">
+        <form action="submit" class="form">
+          <label for="date-input">Birthday:</label>
+          <input type="date" id="date-input" name="date-input" required>
+          <button class="submit-btn" type="submit">submit</button>
+        </form>
+      </div>
+      <div class="content-container">
+      </div>
+    </main>
+
+
   </body>
   <script src="main.js"></script>
+
 </html>
