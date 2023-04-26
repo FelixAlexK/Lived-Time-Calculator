@@ -1,69 +1,47 @@
-*{
+*,body{
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
-body{
+main{
   width: 100%;
-  background-color: #242424;
-  color: white;
-}
-
-body div{
   height: 100vh;
-  border-bottom: solid;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
+  flex-direction: column;
 }
 
-form{
+.form{
+  width: 100%;
   display: flex;
-  gap: 5px;
-  justify-content: center;
   align-items: center;
-
+  gap: 2rem;
 }
 
-#text{
-  padding: 10px 20px;
-  border: none;
-  border-bottom: solid white;
-  border-left: solid white;
-  background-color: transparent;
-  color: white;
-  cursor: text;
+.form label{
+  font-size: clamp(1rem, 4vh, 4rem);
 }
 
-#text:focus{
-  background-color: #242424;
-  border-style: none ;
-
+.form input{
+  padding: 12px 20px;
+  border-radius: 2rem;
 }
 
-#text:hover{
-  border-top: solid white;
-  border-right: solid white;
-  border-bottom: solid #505050;
-  border-left: solid #505050;
+.form button{
+  padding: 12px 20px;
+  border-radius: 2rem;
 }
 
-form button{
-  background-color: transparent;
-  border: none;
-  border-bottom: solid white;
-  border-left: solid white;
-  padding: 10px 20px;
-  color: white;
-  cursor: pointer;
+.content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 2rem;
+  gap: 2rem;
 }
 
-form button:hover{
-  border-top: solid white;
-  border-right: solid white;
-  border-bottom: solid #505050;
-  border-left: solid #505050;
+.element{
+  font-size: clamp(1rem, 4vh, 2rem);
 }
